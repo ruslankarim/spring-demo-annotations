@@ -9,6 +9,8 @@ public class AnnotationDemoApp {
         
         Coach thatSillyCoach = context.getBean("tennisCoach", Coach.class);
         System.out.println(thatSillyCoach.getDailyWorkout());
+        System.out.println(thatSillyCoach.getDailyFortune());
         context.close();
     }
 }
+
