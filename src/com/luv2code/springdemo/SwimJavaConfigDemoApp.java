@@ -7,9 +7,11 @@ public class SwimJavaConfigDemoApp {
         AnnotationConfigApplicationContext context = 
         new AnnotationConfigApplicationContext(SportConfig.class);
 
-        Coach thatSillyCoach = context.getBean("swimCoach", Coach.class);
-        System.out.println(thatSillyCoach.getDailyWorkout());
-        System.out.println(thatSillyCoach.getDailyFortune());
+        SwimCoach theCoach = context.getBean("swimCoach", SwimCoach.class);
+        System.out.println(theCoach.getDailyWorkout());
+        System.out.println(theCoach.getDailyFortune());
+        System.out.println("email: " + theCoach.getEmail());
+        System.out.println("email: " + theCoach.getTeam());
         context.close();
     }
 }
